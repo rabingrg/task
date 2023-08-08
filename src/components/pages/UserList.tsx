@@ -7,7 +7,7 @@ import {
   getFilteredRowModel,
 } from "@tanstack/react-table";
 import { UserListTypes } from "../types/UserListTypes";
-import { UserListData } from "../store/UserList";
+import { UserListData } from "../store/AllUsers";
 import SideBar from "./ui/SideBar";
 
 const UserList = () => {
