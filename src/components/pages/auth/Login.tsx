@@ -1,12 +1,16 @@
 import { useForm } from "react-hook-form";
 import { AuthTypes } from "../../types/AuthTypes";
+import { LoginSchema } from "../../schema/LoginSchema";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 const Login = () => {
   const {
     register,
     reset,
-    handleSubmit
-  } = useForm();
+    handleSubmit,
+    formState: { errors },
+  } = useForm({ resolver: yupResolver(LoginSchema) });
+  
   const submitFn = (data: AuthTypes) => {
     console.log(data);
     reset();
@@ -29,14 +33,20 @@ const Login = () => {
                 className="h-12 p-3 bg-gray-200 focus:outline-none rounded-md text-gray-600"
                 placeholder="Enter Username"
               />
+              <p className="text-xs text-red-500">
+                {errors.username?.message as string}
+              </p>
             </div>
             <div className="flex flex-col  h-20">
               <input
                 type="password"
                 {...register("password")}
-                className="h-12 p-3 bg-gray-200 focus:outline-none rounded-md "
+                className="h-12 p-3 bg-gray-200 focus:outline-none rounded-md text-gray-600"
                 placeholder="Enter Password"
               />
+              <p className="text-xs text-red-500">
+                {errors.password?.message as string}
+              </p>
             </div>
             <div className="flex justify-center">
               <button
