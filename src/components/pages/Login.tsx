@@ -26,7 +26,7 @@ const Login = () => {
         </h1>
         <div className="w-full max-h-48 mx-auto flex flex-col bg-white items-center justify-center">
           <form
-            onSubmit={handleSubmit(submitFn as any)}
+            onSubmit={handleSubmit(submitFn)}
             className="w-5/6 relative top-5 "
           >
             <div className="flex flex-col  h-20">
