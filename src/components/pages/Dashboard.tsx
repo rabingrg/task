@@ -4,7 +4,7 @@ import SideBar from "./ui/SideBar";
 const Dashboard = () => {
   return (
     <div className="w-screen h-screen">
-      <header className="h-20 flex justify-center items-center bg-blue-100 text-center text-3xl text-gray-600">
+      <header className="h-20 flex justify-center items-center bg-blue-100 text-center text-3xl text-gray-600 shadow-md">
         Welcome to Dashboard
       </header>
       <section className="w-full h-full flex">
