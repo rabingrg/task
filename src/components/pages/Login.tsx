@@ -1,9 +1,11 @@
 import { useForm } from "react-hook-form";
-import { AuthTypes } from "../../types/AuthTypes";
-import { LoginSchema } from "../../schema/LoginSchema";
+import { AuthTypes } from "../types/AuthTypes";
+import { LoginSchema } from "../schema/LoginSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
+import {useNavigate} from 'react-router-dom'
 
 const Login = () => {
+  const navigate = useNavigate();
   const {
     register,
     reset,
@@ -14,6 +16,7 @@ const Login = () => {
   const submitFn = (data: AuthTypes) => {
     console.log(data);
     reset();
+    navigate('/dashboard');
   };
   return (
     <section className="w-screen h-screen bg-gray-200 grid place-items-center">
