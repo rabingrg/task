@@ -1,4 +1,5 @@
 import DigitalClock from "./ui/DigitalClock";
+import SideBar from "./ui/SideBar";
 
 const Dashboard = () => {
   return (
@@ -7,7 +8,8 @@ const Dashboard = () => {
         Welcome to Dashboard
       </header>
       <section className="w-full h-full flex">
-        <aside className="w-[18rem] h-full bg-gray-200">
+        <aside className="w-[18rem] h-full p-6 bg-gray-200">
+          <SideBar/>
 
         </aside>
         <div className="w-[calc(100%-18rem)] flex justify-center ">
