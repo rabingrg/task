@@ -19,7 +19,7 @@ const SideBar = () => {
       {sideBarItems.map((items) => (
         <p
           className="text-lg text-gray-500 bg-gray-300 p-2 cursor-pointer mb-2 rounded"
-          onClick={() => navigate(`${items.navigateUrl}`)}
+          onClick={() => navigate(`${items.navigateUrl}`)} key={items.id}
         >
           {items.label}
         </p>

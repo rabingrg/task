@@ -73,7 +73,8 @@ const UserList = ({ filteredUsers }) => {
                   </td>
                 ))}
               </tr>
-              <div className="h-1" />
+              <tr className="h-1"/>
+              {/* <div className="h-1" /> */}
             </>
           ))}
         </tbody>
