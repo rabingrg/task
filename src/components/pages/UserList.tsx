@@ -6,9 +6,9 @@ import {
   useReactTable,
   getFilteredRowModel,
 } from "@tanstack/react-table";
-import { UserListTypes } from "../../types/UserListTypes";
-import { UserListData } from "../../store/UserList";
-import SideBar from "./SideBar";
+import { UserListTypes } from "../types/UserListTypes";
+import { UserListData } from "../store/UserList";
+import SideBar from "./ui/SideBar";
 
 const UserList = () => {
   const columnHelper = createColumnHelper<UserListTypes>();

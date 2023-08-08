@@ -2,7 +2,7 @@
 import {Routes,Route} from 'react-router-dom'
 import Login from './components/pages/Login'
 import Dashboard from './components/pages/Dashboard'
-import UserList from './components/pages/ui/UserList'
+import UserList from './components/pages/UserList'
 
 export const App = () => {
   return (
