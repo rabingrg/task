@@ -8,7 +8,9 @@ import { UserListTypes } from "../types/UserListTypes";
 const SearchList = () => {
   const [searchRole, setSearchRole] = useState<string>("");
   const filteredUsers: UserListTypes[] = UserListData.filter((user) =>
-    user.role.toLowerCase().includes(searchRole.toLowerCase())
+    searchRole.length >= 3
+      ? user.role.toLowerCase().includes(searchRole.toLowerCase())
+      : true
   );
 
   // console.log("filteredUsers", filteredUsers);
