@@ -10,7 +10,7 @@ const SearchUser = ({ searchRole, setSearchRole }: SearchProps) => {
       value={searchRole}
       placeholder="Search Role"
       onChange={(e) => setSearchRole(e.target.value)}
-      className="border-2 border-yellow-400 bg-gray-100 text-gray-600 rounded w-30 h-10 p-3"
+      className="border-2 border-yellow-400 bg-gray-100 text-gray-600 rounded w-30 h-10 p-3 focus:outline-none"
     />
   );
 };
